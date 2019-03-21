@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 자바스크립트 코드 작성 -->
+<script>
+function check() {
+	var price = document.input.price.value;
+	var amount = document.input.amount.value;
+	if(price=="") {
+		alert("가격을 입력하세요.");
+		document.input.price.focus(); // 입력 포커스 이동
+		return;	// 함수 종료
+	}
+	if(amount="") {
+		alert("수량을 입력하세요.");
+		document.input.amount.focus();
+		return;
+	}
+	document.input.submit();	// 폼 데이터를 서버로 제출
+}
+</script>
+</head>
+<body>
+<!-- action="데이터를 받을 주소" method="post" 폼 데이터를 보낼 때 사용 -->
+<form name="input" action="buttonf_result.jsp" method="post">
+	가격 : <input type="text" name="price"><br>
+	수량 : <input type="text" name="amount"><br>
+	<!-- 버튼을 누르면 자바스크립트 check() 함수가 실행됨 -->
+	<!-- <input type="button" value="계산" onclick="check()"> --> <!-- 제출버튼 -->
+	<button type="button" onclick="check()">계산</button> <!-- 제출버튼 -->
+</form>
+
+</body>
+</html>
