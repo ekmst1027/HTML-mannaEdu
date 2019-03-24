@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table {
+/* 이웃한 경계선을 합침 */
+	border-collapse: collapse;
+}
+
+td, th {
+	color: white;
+	background-color: green;
+	height: 50px;
+	width: 150px;
+	text-align: center;	/* 수평정렬방식 */
+	/* 수직정렬방식 : top middle bottom */
+	vertical-align: middle;	/* 수직정렬방식 */
+}
+
+table, td, th {
+	border: 1px solid blue;
+}
+
+caption {
+	caption-side: top;	/* 캡션의 위치 */
+	font-size: 30px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<table>
+		<caption>고객 리스트</caption>
+		<tr>
+			<th>이름</th>
+			<th>이메일</th>
+		</tr>
+		<tr>
+			<th>김철수</th>
+			<th>chul@gmail.com</th>
+		</tr>
+		<tr>
+			<th>김영희</th>
+			<th>kim@gmail.com</th>
+		</tr>
+	</table>
+</body>
+</html>
